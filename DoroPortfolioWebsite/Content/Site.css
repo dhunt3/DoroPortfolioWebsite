@@ -1,0 +1,43 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#header {
+    background-image:url(Images/ComputerShortercolor.jpg);
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    width:100%;
+    height:300px;
+}
+
+img.DH{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.moreinfo{
+    bottom:-500px;
+    right:-200px;
+}
+/*#DH {
+    background-image: url(Images/dh4.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    width:100%;
+    height:100%;
+}*/
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
