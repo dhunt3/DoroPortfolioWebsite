@@ -3,43 +3,55 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - My Online Portfolio</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
-    <div id="header"></div>
-    <div class="navbar navbar-inverse">
+    <img class="DH" src="~/Content/Images/dh4.png" margin="auto" />
+    <button id="togBtn" class="btn btn-default btn-lg glyphicon glyphicon-menu-hamburger btnNavBtn" data-toggle="collapse" data-target="#collapseExample"></button>
+    <!--<a href="#" class="btn btn-info btn-lg">
+        <span id="navButton" class="glyphicon glyphicon-menu-hamburger"></span></a>-->
+    <div class="navbar navbar-inverse navbar-collapse">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                
+               
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/Views/About/Index">About</a></li>
-                    <li><a href="/Views/Contact/Index">Contact</a></li>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "Index", "About")</li>
+                    <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+                    <li>@Html.ActionLink("My Code", "Index", "Projects")</li>
                 </ul>
             </div>
         </div>
     </div>
-    <!--<div class="DH">    </div>-->
-    <img class="DH" src="~/Content/Images/dh1.jpg" margin="auto"/>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        
+        <!--<div class="DH">    </div>-->
+        
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - D'oro Online Portfolio</p>
+            </footer>
+        </div>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".navbar-collapse").hide();
+        $("#togBtn").click(function () {
+            $('.navbar-collapse').slideToggle();
+        });
+    });
+    </script>
+
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        
 </body>
 </html>

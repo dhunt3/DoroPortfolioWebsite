@@ -1,0 +1,61 @@
+﻿@model IEnumerable<DoroPortfolioWebsite.Models.Project>
+
+@{
+    ViewBag.Title = "Index2";
+}
+
+
+    <h2 class="container-fluid pageHeader">My Projects</h2>
+
+    <div class="container myCode">
+        @foreach (var item in Model)
+        {
+    <!--<div class="row">-->
+            <div class="col-md-4">
+                <div class="caption" style="text-align:center">
+                    <h3>@Html.DisplayFor(modelItem => item.Project_Name)</h3>
+                </div>
+                <div class="thumbnail myCode">
+                    <img src="@Html.DisplayFor(modelItem => item.Image)" alt="..." class="gallery">
+                    <div class="caption myCode">
+                        <br />
+                        <p style="text-align:center">@Html.DisplayFor(modelItem => item.Description)</p>
+                        <p style="text-align:center">
+                            <a href="@Html.DisplayFor(modelItem => item.GitHub_Repo)" class="btn pinkBtn pinkBtnText" role="button">View GitHub Code</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <!--</div>-->
+
+            <!--
+                <div class="row"></div>
+            <div class="row">
+                <div class="col-lg-4">
+                    @@Html.DisplayFor(modelItem => item.Project_Name)
+                    <span><img src="@@Html.DisplayFor(modelItem => item.Image)" width="100" /></span>
+                    @@Html.DisplayFor(modelItem => item.Description)
+
+                    <div class="github">@@Html.DisplayFor(modelItem => item.GitHub_Repo)</div>
+
+                </div>
+                <div class="col-lg-4">
+                    @@Html.DisplayFor(modelItem => item.Project_Name)
+                    <span><img src="@@Html.DisplayFor(modelItem => item.Image)" width="100" /></span>
+                    @@Html.DisplayFor(modelItem => item.Description)
+
+                    <div class="github">@@Html.DisplayFor(modelItem => item.GitHub_Repo)</div>
+
+                </div>
+                <div class="col-lg-4">
+                    @@Html.DisplayFor(modelItem => item.Project_Name)
+                    <span><img src="@@Html.DisplayFor(modelItem => item.Image)" width="100" /></span>
+                    @@Html.DisplayFor(modelItem => item.Description)
+
+                    <div class="github">@@Html.DisplayFor(modelItem => item.GitHub_Repo)</div>
+
+                </div>
+            </div>-->
+        }
+    </div>
+

@@ -38,7 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -80,20 +88,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.css" />
+    <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\20150607_000837.jpg" />
+    <Content Include="Content\Images\8e1fe5_421b66919cb8411692d2fe761ba58001.jpg" />
+    <Content Include="Content\Images\AgeProgram.PNG" />
+    <Content Include="Content\Images\CarProgram.PNG" />
     <Content Include="Content\Images\codeeval.jpg" />
     <Content Include="Content\Images\CompShorter.jpg" />
     <Content Include="Content\Images\Computer.jpg" />
     <Content Include="Content\Images\ComputerShorterbw.jpg" />
     <Content Include="Content\Images\ComputerShortercolor.jpg" />
+    <Content Include="Content\Images\Conversion.PNG" />
     <Content Include="Content\Images\dh1.jpg" />
     <Content Include="Content\Images\dh2.jpg" />
     <Content Include="Content\Images\dh4.png" />
+    <Content Include="Content\Images\FizzBuzz.png" />
     <Content Include="Content\Images\githubpic.png" />
+    <Content Include="Content\Images\HTML_Tags.png" />
+    <Content Include="Content\Images\Interview.PNG" />
+    <Content Include="Content\Images\MidtermProject.png" />
+    <Content Include="Content\Images\MidtermProjectFinal.png" />
+    <Content Include="Content\Images\MorceCode.png" />
+    <Content Include="Content\Images\PassionMovieList-Web.png" />
+    <Content Include="Content\Images\PassionMovieMVC-SQL.png" />
+    <Content Include="Content\Images\PromotingArtist.PNG" />
+    <Content Include="Content\Images\Reverser.PNG" />
+    <Content Include="Content\Images\SocialSecPractice.png" />
+    <Content Include="Content\Images\Week6C2.PNG" />
+    <Content Include="Content\Images\Week6C3.PNG" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -136,6 +163,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <EntityDeploy Include="Models\ProjectsDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProjectsDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ProjectsDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProjectsDB.edmx</DependentUpon>
+      <LastGenOutput>ProjectsDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ProjectsDB.edmx.diagram">
+      <DependentUpon>ProjectsDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ProjectsDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProjectsDB.edmx</DependentUpon>
+      <LastGenOutput>ProjectsDB.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -148,14 +192,38 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Projects\Index.cshtml" />
+    <Content Include="Views\Projects\Create.cshtml" />
+    <Content Include="Views\Projects\Edit.cshtml" />
+    <Content Include="Views\Projects\Delete.cshtml" />
+    <Content Include="Views\Projects\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs">
+      <DependentUpon>ProjectsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectsDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectsDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectsDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectsDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectsDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -174,7 +242,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Work\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
