@@ -94,8 +94,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\20150607_000837 %281%29.jpg" />
     <Content Include="Content\Images\20150607_000837.jpg" />
     <Content Include="Content\Images\8e1fe5_421b66919cb8411692d2fe761ba58001.jpg" />
+    <Content Include="Content\Images\8e1fe5_86357b7529724c3da570d0b90f5f513a.jpg" />
     <Content Include="Content\Images\AgeProgram.PNG" />
     <Content Include="Content\Images\CarProgram.PNG" />
     <Content Include="Content\Images\codeeval.jpg" />
@@ -107,10 +109,13 @@
     <Content Include="Content\Images\dh1.jpg" />
     <Content Include="Content\Images\dh2.jpg" />
     <Content Include="Content\Images\dh4.png" />
+    <Content Include="Content\Images\DHLogo.PNG" />
     <Content Include="Content\Images\FizzBuzz.png" />
     <Content Include="Content\Images\githubpic.png" />
     <Content Include="Content\Images\HTML_Tags.png" />
     <Content Include="Content\Images\Interview.PNG" />
+    <Content Include="Content\Images\LinkedIn icon.jpg" />
+    <Content Include="Content\Images\mark-github-256.png" />
     <Content Include="Content\Images\MidtermProject.png" />
     <Content Include="Content\Images\MidtermProjectFinal.png" />
     <Content Include="Content\Images\MorceCode.png" />
@@ -121,6 +126,7 @@
     <Content Include="Content\Images\SocialSecPractice.png" />
     <Content Include="Content\Images\Week6C2.PNG" />
     <Content Include="Content\Images\Week6C3.PNG" />
+    <Content Include="Content\Images\Welcome.PNG" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -180,9 +186,13 @@
       <DependentUpon>ProjectsDB.edmx</DependentUpon>
       <LastGenOutput>ProjectsDB.cs</LastGenOutput>
     </Content>
+    <Content Include="Content\form-to-email.php" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\contactMe.js" />
+    <Content Include="Scripts\gen_validatorv31.js" />
+    <Content Include="Scripts\jqBootstrapValidation.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.4.js" />
@@ -233,6 +243,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Contact\ThankYou.cshtml" />
+    <Content Include="Views\Shared\ContactMe.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

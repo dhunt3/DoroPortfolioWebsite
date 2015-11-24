@@ -8,7 +8,8 @@ ul.a {
 }
 
 .pinkBtn{
-    background-color:#CB1E5F;
+    background-color:gray;
+    margin-top:15px;
 }
 
 
@@ -26,7 +27,7 @@ ul.a {
 }
 
 a.pinkBtnText{
-    color: #fff;
+    color: black;
 text-decoration: none;
 }
 
@@ -38,7 +39,7 @@ text-decoration: none;
 
 .aboutColumn{
     background-color:#cec9c9;
-    padding:40px;
+    padding:10px 10px 10px 10px;
     border-radius:4px;
 }
 
@@ -80,6 +81,7 @@ img.DH{
     display:block;
     margin-left:auto;
     margin-right:auto;
+    padding: 20px;
 }
 
 img.gallery{
