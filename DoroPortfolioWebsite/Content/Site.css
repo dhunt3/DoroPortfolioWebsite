@@ -3,18 +3,91 @@
     padding-bottom: 20px;
 }
 
+ul.a {
+    list-style-type: square;
+}
+
+.pinkBtn{
+    background-color:gray;
+    margin-top:15px;
+}
+
+
+.pageHeader{
+    color:#fff;
+    font-size:large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border:1px solid black;
+    border-radius: 1px;
+    background-color: black;
+    width: 300px;
+    display: inline-block;
+    padding:5px 5px 5px 5px;
+    
+}
+
+a.pinkBtnText{
+    color: black;
+text-decoration: none;
+}
+
+.about{
+    background-color:transparent;
+    padding: 10px 10px 10px 10px;
+    border-radius:10px;
+}
+
+.aboutColumn{
+    background-color:#cec9c9;
+    padding:10px 10px 10px 10px;
+    border-radius:4px;
+}
+
+.btnNavBtn {
+     float:none;
+     margin: 0 auto;
+     display: table;
+     table-layout: fixed;
+}
+
+.myCode{
+    background-color:transparent;
+    border-radius:10px;
+
+    /*background-color: #dbd6d6;*/
+}
+
+div.github{
+    padding: 20px;
+    display: none;
+}
+
+span:hover + div.github {
+    display: block;
+}
+
+container.projectsPage{
+    align-content:center;
+}
 #header {
     background-image:url(Images/ComputerShortercolor.jpg);
     background-repeat:no-repeat;
     background-size:100% 100%;
     width:100%;
-    height:300px;
+    height:200px;
 }
 
 img.DH{
     display:block;
     margin-left:auto;
     margin-right:auto;
+    padding: 20px;
+}
+
+img.gallery{
+    width:200px;
+    height:200px;
+    padding-top:10px;
 }
 
 .moreinfo{

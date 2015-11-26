@@ -1,33 +1,36 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Home";
 }
 
 <br />
 
 <div class="container">
     <div class="row">
-        <div class="col-md-2">
-            <h3>About me...</h3>
-            <p>blah blah</p>
-            <p>blah</p>
-            <a class="btn btn-default" href="#" role="button">Learn More...</a>
+        <div class="col-md-4">
+            <h3 class="pageHeader">About me...</h3>
+            <p>I graduated from Kent State University in 2012 
+            with a B.A in Computer Science and I am completing 
+            a coding bootcamp called We Can Code IT in December 2015.</p>
+            <p>@Html.ActionLink("More about me...", "Index", "About", routeValues: null, htmlAttributes: new { @class = "btn pinkBtn pinkBtnText" })</p>
         </div>
 
-        <div class="col-md-6 col-lg-push-1">
-            <img src="~/Content/Images/20150607_000837.jpg" class="image-rounded img-responsive DH" />
+        <div class="col-md-4 col-lg-pull-1">
+            <img src="~/Content/Images/20150607_000837 (1).jpg" class="img-circle DH" />
         </div>
 
         <!--<div class="row">-->
         <!--<div class="col-md-2  col-md-offset-10 moreinfo">-->
-        <div class="row">
-            <div class="col-md-2 col-md-offset-2">
-                <h3>My Code</h3>
-                <p>blah blah</p>
-                <p>blah</p>
-                <a class="btn btn-default" href="#" role="button">See More...</a>
-            </div>
+        <div class="container">
+            <div class="row"></div>
+            <div class="row">
+                <div class="col-md-2 col-md-offset-8">
+                    <h3 class="pageHeader">My Code</h3>
+                    <img src="~/Content/Images/8e1fe5_86357b7529724c3da570d0b90f5f513a.jpg" />
+                    <p>@Html.ActionLink("See More...", "Index", "Projects", routeValues: null, htmlAttributes: new { @class = "btn pinkBtn pinkBtnText" })</p>
+</div>
         </div>
+    </div>
     </div>
 <!--</div>-->
     </div>
