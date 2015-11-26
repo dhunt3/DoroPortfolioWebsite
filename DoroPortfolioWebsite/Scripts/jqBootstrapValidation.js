@@ -910,3 +910,6 @@
   };
 
 })( jQuery );
+
+
+//http://myprogrammingblog.com/2013/08/27/how-to-make-a-contact-form-with-bootstrap-3-jqueryphphtml5jqbootstrapvalidation/

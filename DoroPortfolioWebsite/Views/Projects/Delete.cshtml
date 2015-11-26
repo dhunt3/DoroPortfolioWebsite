@@ -43,6 +43,13 @@
             @Html.DisplayFor(model => model.GitHub_Repo)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Language_Tools)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language_Tools)
+        </dd>
     </dl>
 
     @using (Html.BeginForm()) {
@@ -50,7 +57,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to List", "EditableIndex")
         </div>
     }
 </div>

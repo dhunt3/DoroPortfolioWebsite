@@ -19,7 +19,7 @@ namespace DoroPortfolioWebsite.Controllers
             return View(db.Projects.ToList());
         }
 
-        public ActionResult Index2()
+        public ActionResult EditableIndex()
         {
             return View(db.Projects.ToList());
         }
@@ -35,7 +35,7 @@ namespace DoroPortfolioWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProjectID,Project_Name,Description,Image,GitHub_Repo")] Project project)
+        public ActionResult Create([Bind(Include = "ProjectID,Project_Name,Description,Image,GitHub_Repo,Language_Tools")] Project project)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace DoroPortfolioWebsite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProjectID,Project_Name,Description,Image,GitHub_Repo")] Project project)
+        public ActionResult Edit([Bind(Include = "ProjectID,Project_Name,Description,Image,GitHub_Repo,Language_Tools")] Project project)
         {
             if (ModelState.IsValid)
             {

@@ -10,10 +10,11 @@
             <PropertyRef Name="ProjectID" />
           </Key>
           <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Project_Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Description" Type="nvarchar" MaxLength="300" />
-          <Property Name="Image" Type="nvarchar" MaxLength="150" />
-          <Property Name="GitHub_Repo" Type="nvarchar" MaxLength="200" />
+          <Property Name="Project_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar(max)" />
+          <Property Name="GitHub_Repo" Type="nvarchar(max)" />
+          <Property Name="Language_Tools" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="ProjectDatabaseModelStoreContainer">
           <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
@@ -27,10 +28,11 @@
             <PropertyRef Name="ProjectID" />
           </Key>
           <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Project_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="Image" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
-          <Property Name="GitHub_Repo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="GitHub_Repo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Language_Tools" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="ProjectDatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Projects" EntityType="Self.Project" />
@@ -44,6 +46,7 @@
           <EntitySetMapping Name="Projects">
             <EntityTypeMapping TypeName="ProjectDatabaseModel.Project">
               <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="Language_Tools" ColumnName="Language_Tools" />
                 <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
                 <ScalarProperty Name="Project_Name" ColumnName="Project_Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />

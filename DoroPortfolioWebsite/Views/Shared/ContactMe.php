@@ -1,11 +1,9 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+
 <?php
 // check if fields passed are empty
+// php file that I found to help me get my contact form together
+// Still learning php so the tutorial was helpful
+// Needed to download PHP tools free trial to get VS to read my php file
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
    empty($_POST['message'])	||
@@ -30,5 +28,3 @@ $headers .= "Reply-To: $email_address";
 mail($to,$email_subject,$email_body,$headers);
 return true;			
 ?>
-</body>
-</html>

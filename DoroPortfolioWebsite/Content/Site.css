@@ -1,4 +1,6 @@
-﻿body {
+﻿/*Added a few css styles to help my page look the way I wanted. Some of it is working right along bootstrap concepts*/
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -6,13 +8,18 @@
 ul.a {
     list-style-type: square;
 }
+.ExtraInfo{
+    display: block;
+padding: 4px;
+}
 
+/*button for my "View GitHub Code" in my My code page*/
 .pinkBtn{
     background-color:gray;
     margin-top:15px;
 }
 
-
+/*page header gives each header of my pages that black border with white lettering (Contact Me, About, Projects)*/
 .pageHeader{
     color:#fff;
     font-size:large;
@@ -37,6 +44,7 @@ text-decoration: none;
     border-radius:10px;
 }
 
+/*gives column in my about page a nice color with a pretty border radius*/
 .aboutColumn{
     background-color:#cec9c9;
     padding:10px 10px 10px 10px;

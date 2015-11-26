@@ -1,50 +1,61 @@
 ﻿@model IEnumerable<DoroPortfolioWebsite.Models.Project>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Projects";
 }
 
-<h2>Index</h2>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Project_Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GitHub_Repo)
-        </th>
-        <th></th>
-    </tr>
+<!--This index page is how I decided to show my database information-->
+<h2 class="container-fluid pageHeader">My Projects</h2>
 
+<div class="container myCode">
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Project_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GitHub_Repo)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProjectID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ProjectID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProjectID })
-            </td>
-        </tr>
-    }
+        <div class="col-md-4">
+            <div class="caption" style="text-align:center">
+                <h3>@Html.DisplayFor(modelItem => item.Project_Name)</h3>
+            </div>
+            <div class="thumbnail myCode" id="code">
+                <!--Following code is for pop up picture-->
+                <!--The myModal-@@(item.ProjectID) gives each image it's own modal. This made sure that the popup related to specific picture clicked on-->
+                <center><input type="image" src="@Html.DisplayFor(modelItem => item.Image)" name="Code" class="btTxt submit" id="saveForm" data-toggle="modal" data-target="#myModal-@(item.ProjectID)" /></center>
 
-</table>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal-@(item.ProjectID)" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">@Html.DisplayFor(modelItem => item.Project_Name)</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="@Html.DisplayFor(modelItem => item.Image)" class="img-responsive">
+                                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="caption myCode">
+                    <br />
+                    <p style="text-align:center">@Html.DisplayFor(modelItem => item.Description)</p>
+                    <br />
+                  
+                </div>
+            </div>
+            <div class="ExtraInfo">
+                <p style="text-align:center"><b>Languages or Tools used:</b></p>
+                <p style="text-align:center">@Html.DisplayFor(modelItem => item.Language_Tools)</p>
+                <p style="text-align:center">
+                    <a href="@Html.DisplayFor(modelItem => item.GitHub_Repo)" class="btn pinkBtn pinkBtnText" role="button">View GitHub Code</a>
+                </p>
+            </div>
+        </div>
+    }
+</div>
+

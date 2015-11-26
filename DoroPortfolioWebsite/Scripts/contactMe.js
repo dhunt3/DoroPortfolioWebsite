@@ -1,4 +1,6 @@
 ﻿/*
+ Found great code online to help set up my Contact form.
+ Still learning js so this page has been extremely helpful
   Jquery Validation using jqBootstrapValidation
    example is taken from jqBootstrapValidation docs 
   */
@@ -23,7 +25,7 @@ $(function () {
                    firstName = name.split(' ').slice(0, -1).join(' ');
                }
                $.ajax({
-                   url: "/Views/Shared/ContactMe.php",
+                   url: "~/Views/Shared/ContactMe.php",
                    type: "POST",
                    data: { name: name, email: email, message: message },
                    cache: false,

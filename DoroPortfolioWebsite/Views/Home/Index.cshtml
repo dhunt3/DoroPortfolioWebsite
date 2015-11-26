@@ -1,6 +1,6 @@
-﻿
+﻿<!--Index view page for my Home controller-->
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Home";
 }
 
 <br />
@@ -8,6 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
+            <!--Description below tells more about me with a link to my about index page-->
             <h3 class="pageHeader">About me...</h3>
             <p>I graduated from Kent State University in 2012 
             with a B.A in Computer Science and I am completing 
@@ -24,10 +25,11 @@
         <div class="container">
             <div class="row"></div>
             <div class="row">
+                <!--Code below shows image of my code with a link to my code page-->
                 <div class="col-md-2 col-md-offset-8">
                     <h3 class="pageHeader">My Code</h3>
                     <img src="~/Content/Images/8e1fe5_86357b7529724c3da570d0b90f5f513a.jpg" />
-                    <p>@Html.ActionLink("See More...", "Index2", "Projects", routeValues: null, htmlAttributes: new { @class = "btn pinkBtn pinkBtnText" })</p>
+                    <p>@Html.ActionLink("See More...", "Index", "Projects", routeValues: null, htmlAttributes: new { @class = "btn pinkBtn pinkBtnText" })</p>
 </div>
         </div>
     </div>

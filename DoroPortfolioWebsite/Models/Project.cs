@@ -19,5 +19,6 @@ namespace DoroPortfolioWebsite.Models
         public string Description { get; set; }
         public string Image { get; set; }
         public string GitHub_Repo { get; set; }
+        public string Language_Tools { get; set; }
     }
 }

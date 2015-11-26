@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'c:\users\we can code it\documents\visual studio 2013\Projects\DoroPortfolioWebsite\DoroPortfolioWebsite\Models\ProjectsDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\We Can Code IT\Documents\DoroPortfolioWebsite\DoroPortfolioWebsite\Models\ProjectsDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
